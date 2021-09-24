@@ -8,11 +8,11 @@ import org.springframework.cglib.proxy.MethodProxy;
 
 public class CGLibFactory implements MethodInterceptor {
 
-	
-	
+
+
 	private Object target;
-	
-	
+
+
 	public CGLibFactory () {
 		super();
 	}
@@ -20,24 +20,24 @@ public class CGLibFactory implements MethodInterceptor {
 		super();
 		this.target = taObject;
 	}
-	
+
 
 	public Object createXXOO() {
-		//ÔöÇ¿Æ÷
+		//å¢å¼ºå™¨
 		Enhancer enhancer = new Enhancer();
-		// ´´½¨×ÓÀà£¬×÷Îª´úÀíÀà
+		// åˆ›å»ºå­ç±»ï¼Œä½œä¸ºä»£ç†ç±»
 		enhancer.setSuperclass(Girl.class);
-		// ÉèÖÃ»Øµ÷Àà
+		// è®¾ç½®å›è°ƒç±»
 		enhancer.setCallback(this);
 		return enhancer.create();
 	}
-	
-	
+
+
 	public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
 
-		System.out.println("Ç®");
+		System.out.println("é’±");
 		method.invoke(target, args);
-		System.out.println("ºó");
+		System.out.println("å");
 		return null;
 	}
 
