@@ -17,7 +17,7 @@ public class TestGetBean {
 //		Person person = (Person)ctx.getBean("person");
 //		Food food = ctx.getBean("food",Food.class);
 //		
-//		food.setName("�㽶");
+//		food.setName("�㽶");
 //		
 //		person.setName("zhangsan");
 //		person.setAge(18);

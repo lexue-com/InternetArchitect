@@ -1,6 +1,6 @@
 package com.mashibing.spring;
 
-public class Person {
+public class Person3 {
 
 	private String name;
 	private int age;

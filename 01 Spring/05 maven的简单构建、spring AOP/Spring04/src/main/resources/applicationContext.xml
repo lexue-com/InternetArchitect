@@ -2,21 +2,23 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans           http://www.springframework.org/schema/beans/spring-beans.xsd">
- <!--
- 动态工厂 每次都是new出来的
-        <bean id="carFactory" class="com.mashibing.spring.CarFactory">
-        
-      	  <property name="name"  value="audi"></property> 
+		<!--************* 动态工厂 ******************-->
+ 	   <!--方法一： 每次都是new出来的，需要有成员变量通过set方法-->
+       <bean id="carFactory" class="com.mashibing.spring.CarFactory">
+      	  <property name="color"  value="blue"></property> 
         </bean>
+        <bean id="car1" factory-bean="carFactory" factory-method="getCarByColor" > </bean>
         
-        <bean id="car" factory-bean="carFactory" factory-method="getCar">
-        需要set方法
-        	
-        </bean> -->
-        
-        <bean id="car" class="com.mashibing.spring.CarFactory" factory-method="getCar" >
+        <!--方法二:  通过方法直接注入-->
+	   <bean id="carFactory2" class="com.mashibing.spring.CarFactory" >	</bean>
+       <bean id="car2" factory-bean="carFactory2" factory-method="getCar" >
         	<constructor-arg value="audi"></constructor-arg>
-        </bean>
+       </bean> 
+       
+       <!--************* 静态工厂 ******************-->
+       <bean id="car3" class="com.mashibing.spring.CarFactory"  factory-method="getCarByPrice">
+        	<constructor-arg value="120w"></constructor-arg>
+       </bean> 
         
 </beans>
 

@@ -5,6 +5,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="libs/spring-beans-5.1.7.RELEASE.jar" sourcepath="C:/Users/Administrator/Desktop/课件/Spring/spring-framework-5.1.7.RELEASE-dist/spring-framework-5.1.7.RELEASE/libs/spring-beans-5.1.7.RELEASE-sources.jar">
 		<attributes>

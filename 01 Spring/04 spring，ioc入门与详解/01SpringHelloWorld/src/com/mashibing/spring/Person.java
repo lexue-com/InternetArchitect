@@ -4,10 +4,10 @@ public class Person {
 
 	private String name;
 	private int age;
-	private Food food;
+	private com.mashibing.spring.Food food;
 	
 	
-	public Person(String name, int age, Food food) {
+	public Person(String name, int age, com.mashibing.spring.Food food) {
 		super();
 		this.name = name;
 		this.age = age;

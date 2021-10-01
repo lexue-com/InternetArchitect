@@ -1,5 +1,4 @@
 package com.mashibing.spring;
-
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -17,7 +16,7 @@ public class TestGetBean {
 //		Person person = (Person)ctx.getBean("person");
 //		Food food = ctx.getBean("food",Food.class);
 //		
-//		food.setName("�㽶");
+//		food.setName("香蕉");
 //		
 //		person.setName("zhangsan");
 //		person.setAge(18);

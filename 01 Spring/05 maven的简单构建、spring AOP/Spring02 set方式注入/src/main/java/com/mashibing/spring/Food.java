@@ -1,6 +1,6 @@
 package com.mashibing.spring;
 
-public class Food {
+public class Food3 {
 
 	private String name;
 
