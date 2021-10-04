@@ -3,16 +3,30 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans           http://www.springframework.org/schema/beans/spring-beans.xsd">
 		<!--Spring关联引用，默认是单例的  -->
-        <bean id="A" class="com.mashibing.spring.A" >
+		
+		
+        <bean id="A" class="com.mashibing.spring.A"  scope = "prototype">
         	<property name="b" ref = "B"></property>
         </bean>
-        
         <bean id="B" class="com.mashibing.spring.B" >
             <property name="c" ref = "C"></property>
         </bean>
         
-        <bean id="C" class="com.mashibing.spring.C" >
+        <bean id="C" class="com.mashibing.spring.C"   scope = "prototype">
              <property name="a" ref = "A"></property>
+        </bean>
+        
+        
+        
+        
+         <bean id="AA" class="com.mashibing.spring.A" lazy-init="true" depends-on = "BB">
+        </bean>
+        <bean id="BB" class="com.mashibing.spring.B" lazy-init="true">
+            <property name="c" ref = "CC"></property>
+        </bean>
+        
+        <bean id="CC" class="com.mashibing.spring.C"   scope = "prototype" lazy-init="true">
+             <property name="a" ref = "AA"></property>
         </bean>
         
         

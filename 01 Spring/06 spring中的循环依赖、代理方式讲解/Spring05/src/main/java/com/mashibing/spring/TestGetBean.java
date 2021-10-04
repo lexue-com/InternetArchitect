@@ -19,7 +19,7 @@ public class TestGetBean {
 		System.out.println(ToStringBuilder.reflectionToString(a.getB()));
 		System.out.println(ToStringBuilder.reflectionToString(a.getB().getC()));
 		
-//		//2、通过Spring容器
+//		//2、通过Spring容器 
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		A a1 = ctx.getBean("A",A.class);
@@ -34,19 +34,21 @@ public class TestGetBean {
 		System.out.println(ToStringBuilder.reflectionToString(a2.getB()));
 		System.out.println(ToStringBuilder.reflectionToString(a2.getB().getC()));
 		
-		System.out.println(a1 == a2);
-		System.out.println(a1.getB() == a2.getB());
+		System.out.println("A不是单例："+(a1 == a2));
+		System.out.println("B是单例："+(a1.getB() == a2.getB()));
 //	
 //		
+		System.out.println("-------------懒加载--------------");
+		B bb = ctx.getBean("BB",B.class);
+		System.out.println(ToStringBuilder.reflectionToString(bb));
 		
-//		B b = ctx.getBean("B",B.class);
-//		System.out.println(ToStringBuilder.reflectionToString(b));
-//		
-//		A a = ctx.getBean("A",A.class);
-//		System.out.println(ToStringBuilder.reflectionToString(a));
-//		System.out.println(a.getName().equals(""));
-//		System.out.println(b.getName().equals(""));
+		A aa = ctx.getBean("AA",A.class);
+		System.out.println(ToStringBuilder.reflectionToString(aa));
 		
+		C cc = ctx.getBean("CC",C.class);
+		System.out.println(ToStringBuilder.reflectionToString(cc));
+
+
 
 	}
 }
