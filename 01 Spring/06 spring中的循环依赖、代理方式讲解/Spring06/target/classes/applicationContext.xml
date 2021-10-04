@@ -6,18 +6,18 @@
 	default-autowire="byType"
 	>
         
-        <bean id="A" class="com.mashibing.spring.A">
+        <bean id="A" class="com.mashibing.spring.A" depends-on="B">
         </bean>
         
         
-        <bean id="B" class="com.mashibing.spring.B" >
+        <bean id="B" class="com.mashibing.spring.B"  depends-on="C">
         </bean>
         
-        <bean id="b2" class="com.mashibing.spring.B" >
+        <bean id="b2" class="com.mashibing.spring.B"  depends-on="C" >
         </bean>
         
         
-        <bean id="C" class="com.mashibing.spring.C" >
+        <bean id="C" class="com.mashibing.spring.C" depends-on="A">
         </bean>
         
 </beans>
