@@ -1,18 +1,23 @@
 package com.mashibing.spring;
 
 public class B {
-	private String name;
+	private C c;
 	
-	public String getName() {
-		return name;
+	public C getC() {
+		return c;
 	}
-
-	public void setName(String name) {
-		this.name = name;
+	public void setC(C c) {
+		this.c = c;
 	}
 
 	public B() {
 		super();
-		System.out.println("B Init.");
+		System.out.println("B init~");
+
 	}
+	
+	
+	
+	
+	
 }

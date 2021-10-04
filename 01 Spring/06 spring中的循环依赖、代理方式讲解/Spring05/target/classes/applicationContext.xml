@@ -2,18 +2,23 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans           http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-        <bean id="A" class="com.mashibing.spring.A" lazy-init="true">
-        
-        	<property name="name"><value></value></property>
+		<!--Spring关联引用，默认是单例的  -->
+        <bean id="A" class="com.mashibing.spring.A" >
+        	<property name="b" ref = "B"></property>
         </bean>
         
-        <bean id="B" class="com.mashibing.spring.B"  lazy-init="true">
-        	<property name="name"><null></null></property>
+        <bean id="B" class="com.mashibing.spring.B" >
+            <property name="c" ref = "C"></property>
         </bean>
         
-        <bean id="C" class="com.mashibing.spring.C"  lazy-init="true">
+        <bean id="C" class="com.mashibing.spring.C" >
+             <property name="a" ref = "A"></property>
         </bean>
+        
+        
+        
+        
+   
                 
       
 </beans>
