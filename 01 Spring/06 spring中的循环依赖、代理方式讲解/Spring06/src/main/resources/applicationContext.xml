@@ -6,18 +6,19 @@
 	default-autowire="byType"
 	>
         
-        <bean id="A" class="com.mashibing.spring.A" depends-on="B">
+        <bean id="A" class="com.mashibing.spring.A" lazy-init="true">
+        	<property name="name"><value></value></property>
         </bean>
         
         
-        <bean id="B" class="com.mashibing.spring.B"  depends-on="C">
+        <bean id="B" class="com.mashibing.spring.B"  lazy-init="true">
+        	<property name="name"><null></null></property>
         </bean>
         
-        <bean id="b2" class="com.mashibing.spring.B"  depends-on="C" >
-        </bean>
+      
         
         
-        <bean id="C" class="com.mashibing.spring.C" depends-on="A">
+        <bean id="C" class="com.mashibing.spring.C" lazy-init="true">
         </bean>
         
 </beans>

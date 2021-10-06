@@ -11,4 +11,12 @@ public class C {
 	public void setA(A a) {
 		this.a = a;
 	}
+
+
+	public C() {
+		super();
+		System.out.println("C init ~");
+	}
+	
+	
 }
