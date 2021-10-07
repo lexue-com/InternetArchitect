@@ -11,14 +11,12 @@
         </bean>
         
         
-        <bean id="B" class="com.mashibing.spring.B"  lazy-init="true">
+        <bean id="B" class="com.mashibing.spring.B"  autowire="byName" lazy-init="true" >
         	<property name="name"><null></null></property>
         </bean>
         
-      
-        
-        
-        <bean id="C" class="com.mashibing.spring.C" lazy-init="true">
+     
+        <bean id="c" class="com.mashibing.spring.C" autowire="byType" lazy-init="true">
         </bean>
         
 </beans>

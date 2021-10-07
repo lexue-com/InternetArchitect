@@ -10,14 +10,12 @@ import com.mashibing.spring.dao.UserDao;
 import com.mashibing.spring.entity.User;
 
 /**
- * ´¦Àí¾ßÌåÒµÎñÂß¼­
- * ±ÈÈç£ºĞ£ÑéÕËºÅÃÜÂëÊÇ·ñÕıÈ·
+ *å¤„ç†å…·ä½“ä¸šåŠ¡é€»è¾‘
+ * æ¯”å¦‚ï¼šæ ¡éªŒè´¦å·å¯†ç æ˜¯å¦æ­£ç¡®
  * @author Administrator
- *
  */
 
-// @Component ×¢²ábean  Ïàµ±ÓÚ <bean id=""
-
+// @Component æ³¨å†Œbean  ç›¸å½“äº<bean id=""
 @Service
 public class MainService {
 
@@ -28,7 +26,7 @@ public class MainService {
 	public User login(String loginName, String password) {
 
 		System.out.println("loginName:" + loginName);
-		System.out.println("Service ½Óµ½ÇëÇó £¬¿ªÊ¼´¦Àí");
+		System.out.println("Serviceæ¥åˆ°è¯·æ±‚,å¼€å§‹å¤„ç†");
 		User user = dao.getUserByName(loginName);
 		
 		System.out.println(ToStringBuilder.reflectionToString(user));

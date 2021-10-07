@@ -6,6 +6,6 @@ public class Girl implements Human{
 	}
 
 	public void bath() {
-		System.out.println("×óÈıÈ¦~");
+		System.out.println("å·¦ä¸‰åœˆ~");
 	}
 }

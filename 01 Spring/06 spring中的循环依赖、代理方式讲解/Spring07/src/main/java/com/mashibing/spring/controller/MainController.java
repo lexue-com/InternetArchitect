@@ -11,8 +11,8 @@ import com.mashibing.spring.service.MainService;
 public class MainController {
 
 	/**
-	 * ¸ºÔðÂß¼­Ìø×ª
-	 * ÔÚweb»·¾³ÏÂ£¬ÓÉController²ãÏÈ½ÓÈë
+	 *è´Ÿè´£é€»è¾‘è·³è½¬
+	 *åœ¨webçŽ¯å¢ƒä¸‹ï¼Œç”±controllerå±‚å…ˆæŽ¥å…¥
 	 * @return
 	 */
 	
@@ -26,12 +26,12 @@ public class MainController {
 		User user = srv.login(loginName,password);
 		
 		if(user == null) {
-			return "µÇÂ¼Ê§°Ü";
+			return "ç™»å½•æˆåŠŸ";
 		}else {
-			return "µÇÂ¼³É¹¦";
+			return "ç™»å½•å¤±è´¥";
 		}
 	}
 	
 	
-	// get/set ÃæÏòÇÐÃæ±à³Ì -> ÉÏµÛÊÓ½Ç  Proxy CGLib
+	// get/set ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ -> ï¿½Ïµï¿½ï¿½Ó½ï¿½  Proxy CGLib
 }

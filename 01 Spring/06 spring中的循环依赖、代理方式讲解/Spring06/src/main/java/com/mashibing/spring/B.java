@@ -1,7 +1,8 @@
 package com.mashibing.spring;
 
 public class B {
-
+	
+	private C c;
 	private String name;
 
 	public String getName() {
@@ -22,6 +23,16 @@ public class B {
 		super();
 		System.out.println("B init ~");
 	}
+
+	public C getC() {
+		return c;
+	}
+
+	public void setC(C c) {
+		this.c = c;
+	}
+	
+	
 
 	
 	

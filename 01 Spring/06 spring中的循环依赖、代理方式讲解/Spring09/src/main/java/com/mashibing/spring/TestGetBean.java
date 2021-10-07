@@ -3,7 +3,10 @@ package com.mashibing.spring;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-
+/**
+ * JDKåŠ¨æ€ä»£ç†
+ * @author Administrator
+ */
 public class TestGetBean {
 
 	
@@ -15,17 +18,17 @@ public class TestGetBean {
 			
 			public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 
-				System.out.println(method.getName() + " ->> ·½·¨±»Ö´ĞĞ");
+				System.out.println(method.getName() + " ->> æ–¹æ³•è¢«æ‰§è¡Œ");
 				
 				if (method.getName().equals("bath")) {
-					System.out.println("Íµ¿´Ï´Ôè");
+					System.out.println("å·çœ‹æ´—æ¾¡");
 					Object invoke = method.invoke(girl, args);
-					System.out.println("6ÁË6ÁË");
+					System.out.println("6äº†6äº†");
 					return invoke;
 				}else {
-					System.out.println("·¹Ç°");
+					System.out.println("é¥­å‰");
 					Object invoke = method.invoke(girl, args);
-					System.out.println("·¹ºó");
+					System.out.println("é¥­å");
 					return invoke;
 				}
 			}

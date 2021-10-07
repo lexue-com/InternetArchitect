@@ -7,10 +7,9 @@ import org.springframework.stereotype.Component;
 
 
 /**
- * ORM映射
- * 线程安全，成员属性，不能被共享
+ * ORM鏄犲皠
+ * 绾跨▼瀹夊叏,鎴愬憳灞炴�э紝涓嶈兘鍏变韩
  * @author Administrator
- *
  */
 
 @Component

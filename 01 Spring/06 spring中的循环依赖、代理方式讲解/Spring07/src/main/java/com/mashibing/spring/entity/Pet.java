@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 public class Pet {
 
-	@Value("ø…¿÷")
+	@Value("ÂèØ‰πê")
 	private String name;
 	
 }

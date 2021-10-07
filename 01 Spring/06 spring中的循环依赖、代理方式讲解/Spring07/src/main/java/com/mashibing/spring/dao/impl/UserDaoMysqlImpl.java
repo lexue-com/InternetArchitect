@@ -9,14 +9,11 @@ import com.mashibing.spring.entity.User;
 
 
 /**
- * Ò»¸öÏß³Ì ´´½¨Á¬½Ó
- * ÁíÒ»¸öÏß³Ì ¹Ø±ÕÁ¬½Ó
- * 
- * ¶ÔÓ¦µÄÀà -> Connection Àà
- * 
+ *ä¸€ä¸ªçº¿ç¨‹åˆ›å»ºçº¿ç¨‹
+ *å¦ä¸€ä¸ªçº¿ç¨‹å…³é—­çº¿ç¨‹
+ *å¯¹åº”åŒä¸€ä¸ªå¯¹è±¡ -> Connection ï¿½ï¿½
  * ThreadLocal 
  * @author Administrator
- *
  */
 
 @Repository("daoMysql")
@@ -26,7 +23,7 @@ public class UserDaoMysqlImpl implements UserDao {
 	User user;
 	
 	public User getUserByName(String name) {
-		System.out.println("ÓÃ»§²éÕÒÖÐ¡£¡£¡£");
+		System.out.println("ç”¨æˆ·æŸ¥æ‰¾ä¸­...");
 		return user;
 	}
 

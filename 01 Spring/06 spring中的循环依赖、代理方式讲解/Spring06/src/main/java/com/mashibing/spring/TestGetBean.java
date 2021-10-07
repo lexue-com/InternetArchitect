@@ -18,5 +18,8 @@ public class TestGetBean {
 		System.out.println(ToStringBuilder.reflectionToString(b));
 		System.out.println(a.getName().equals(""));
 		System.out.println(b.getName().equals(""));
+		
+		C c = ctx.getBean("C",C.class);
+		System.out.println(ToStringBuilder.reflectionToString(c));
 	}
 }
