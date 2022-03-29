@@ -473,6 +473,12 @@ SpringBoot + dubbo
 
 ```xml
 
+	<properties>
+		<java.version>1.8</java.version>
+		<spring-boot.version>2.3.0.RELEASE</spring-boot.version>
+   		<dubbo.version>2.7.8</dubbo.version>
+	</properties>
+
 		<!-- Aapche Dubbo -->
 
 

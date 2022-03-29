@@ -11,7 +11,5 @@ public class DemoApplication {
 		ConfigurableApplicationContext ctx = SpringApplication.run(DemoApplication.class, args);
 		TestRedis redis = ctx.getBean(TestRedis.class);
 		redis.testRedis();
-
 	}
-
 }

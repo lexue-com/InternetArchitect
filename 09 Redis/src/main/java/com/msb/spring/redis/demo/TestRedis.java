@@ -30,46 +30,39 @@ public class TestRedis {
     @Autowired
     ObjectMapper  objectMapper;
 
-
     public void testRedis(){
 
-
-
-//        stringRedisTemplate.opsForValue().set("hello01","china");
-//
-//        System.out.println(stringRedisTemplate.opsForValue().get("hello01"));
-
+        //低级API  客户端做二进制安全转换
         RedisConnection conn = redisTemplate.getConnectionFactory().getConnection();
-
         conn.set("hello02".getBytes(),"mashibing".getBytes());
         System.out.println(new String(conn.get("hello02".getBytes())));
 
+        //高级API
+        //字符串类型
+        stringRedisTemplate.opsForValue().set("hello01","china");
+        System.out.println(stringRedisTemplate.opsForValue().get("hello01"));
 
-//        HashOperations<String, Object, Object> hash = stringRedisTemplate.opsForHash();
-//        hash.put("sean","name","zhouzhilei");
-//        hash.put("sean","age","22");
-//
-//        System.out.println(hash.entries("sean"));
+        //hash类型
+        HashOperations<String, Object, Object> hash = stringRedisTemplate.opsForHash();
+        hash.put("sean","name","zhouzhilei");
+        hash.put("sean","age","22");
+        System.out.println(hash.entries("sean"));
 
-
+        //redis内写对象
         Person p = new Person();
         p.setName("zhangsan");
         p.setAge(16);
-
-//        stringRedisTemplate.setHashValueSerializer(new Jackson2JsonRedisSerializer<Object>(Object.class));
-
+        //序列化
+        // stringRedisTemplate.setHashValueSerializer(new Jackson2JsonRedisSerializer<Object>(Object.class));
         Jackson2HashMapper jm = new Jackson2HashMapper(objectMapper, false);
-
         stringRedisTemplate.opsForHash().putAll("sean01",jm.toHash(p));
-
         Map map = stringRedisTemplate.opsForHash().entries("sean01");
-
         Person per = objectMapper.convertValue(map, Person.class);
         System.out.println(per.getName());
 
-
+       //消息发布
         stringRedisTemplate.convertAndSend("ooxx","hello");
-
+       //消息订阅
         RedisConnection cc = stringRedisTemplate.getConnectionFactory().getConnection();
         cc.subscribe(new MessageListener() {
             @Override
