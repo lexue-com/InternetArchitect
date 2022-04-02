@@ -1,9 +1,7 @@
-package com.msb.zookeeper.locks;
+package com.msb.zookeeper.lockOld;
 
-import com.msb.zookeeper.configurationcenter.DefaultWatch;
-import com.msb.zookeeper.configurationcenter.ZKConf;
-import com.msb.zookeeper.configurationcenter.ZKUtils;
-import org.apache.zookeeper.ZooKeeper;
+import com.msb.zookeeper.configOld.*;
+import org.apache.zookeeper.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

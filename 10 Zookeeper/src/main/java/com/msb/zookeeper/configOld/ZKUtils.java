@@ -1,4 +1,4 @@
-package com.msb.zookeeper.configurationcenter;
+package com.msb.zookeeper.configOld;
 import org.apache.zookeeper.ZooKeeper;
 
 import java.util.concurrent.CountDownLatch;

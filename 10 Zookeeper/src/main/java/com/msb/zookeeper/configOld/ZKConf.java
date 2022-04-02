@@ -1,4 +1,4 @@
-package com.msb.zookeeper.configurationcenter;
+package com.msb.zookeeper.configOld;
 
 /**
  * @author: 马士兵教育

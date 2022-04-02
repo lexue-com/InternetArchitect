@@ -1,6 +1,6 @@
-package com.msb.zookeeper.configurationcenter;
+package com.msb.zookeeper.configOld;
 
-import org.apache.zookeeper.ZooKeeper;
+import org.apache.zookeeper.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
